@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Modal from './components/Modal/Modal';
+import { modalContent } from './components/Modal/modalContent'
 
 function App() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Home Page Heading</h1>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ante risus, pulvinar ac dictum id, aliquam non justo. Morbi convallis quam nunc, a dapibus neque interdum fringilla.
+      </div>
+      <button className='open-modal-btn' onClick={openModal}>
+        Open Modal
+      </button>
+      <Modal title={modalContent.title} text={modalContent.text} isOpen={isOpen} closeModal={closeModal} />
     </div>
   );
 }

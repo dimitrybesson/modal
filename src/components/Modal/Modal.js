@@ -1,4 +1,4 @@
-import './Modal.css'
+import './Modal.scss'
 import ReactModal from 'react-modal';
 
 if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('#root')

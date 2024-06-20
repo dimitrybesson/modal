@@ -41,3 +41,31 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+%modal-header {
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+%modal-footer {
+    border-top: 2px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+%modal-body {
+    overflow-y: scroll;
+    margin: 10px;
+}
+
+.modal-header {
+    @extend %modal-header;
+}
+
+.modal-body {
+    @extend %modal-body;
+}
+
+.modal-footer {
+    @extend %modal-footer;
+}

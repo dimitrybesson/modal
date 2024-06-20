@@ -9,6 +9,7 @@ const Modal = ({ title, text, isOpen, closeModal }) => {
         <ReactModal
             isOpen={isOpen}
             className={'modal-content centered'}
+            closeTimeoutMS={1000}
             onRequestClose={closeModal}
             overlayClassName={`modal-bg`}
             contentLabel='Sample Modal'

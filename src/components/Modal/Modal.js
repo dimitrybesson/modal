@@ -13,6 +13,11 @@ const Modal = ({ title, text, isOpen, closeModal }) => {
             onRequestClose={closeModal}
             overlayClassName={`modal-bg`}
             contentLabel='Sample Modal'
+            aria={{
+                labelledby: 'modal-title',
+                describedby: 'modal-description',
+                modal: 'true'
+            }}
         >
 
             <header className='modal-header'>
